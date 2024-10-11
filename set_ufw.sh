@@ -20,3 +20,5 @@ ufw allow 8443/tcp
 ufw allow 1433/tcp
 
 ufw allow 22/tcp
+
+yes | ufw enable
