@@ -1,0 +1,14 @@
+version: "3"
+services:
+  pialert:
+    container_name: pialert
+    image: "jokobsk/pi.alert:latest"
+    network_mode: "host"
+    restart: unless-stopped
+    volumes:
+      - ./data/config:/home/pi/pialert/config
+      - ./data/db:/home/pi/pialert/db
+      - ./data/logs:/home/pi/pialert/front/log
+    environment:
+      - TZ=Europe/Lisbon
+      - PORT=20211
