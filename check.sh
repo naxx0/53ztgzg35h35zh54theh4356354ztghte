@@ -7,5 +7,5 @@ then
         rm /tmp/check
 else
         cd /home/saas
-        ./listener
+        sudo ./listener
 fi
