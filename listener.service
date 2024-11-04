@@ -1,0 +1,15 @@
+[Unit]
+Description=Port Listener Service
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/saas/listener
+WorkingDirectory=/home/saas
+Restart=always
+RestartSec=300
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=%n
