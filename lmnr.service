@@ -1,0 +1,15 @@
+[Unit]
+Description=LMNR Sppofing Detection
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/saas/lnmr/lmnr
+WorkingDirectory=/home/saas/lmnr
+Restart=always
+RestartSec=300
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=%n
